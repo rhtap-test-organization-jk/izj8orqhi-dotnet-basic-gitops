@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: izj8orqhi-dotnet-basic-gitops
+  description: This is GitOps manifest for izj8orqhi-dotnet-basic   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: izj8orqhi-dotnet-basic
+    janus-idp.io/tekton: izj8orqhi-dotnet-basic
+    backstage.io/kubernetes-id: izj8orqhi-dotnet-basic 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:izj8orqhi-dotnet-basic
